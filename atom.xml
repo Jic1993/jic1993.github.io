@@ -4,9 +4,9 @@
   <subtitle>subsubsub</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://jichong.tech/"/>
+  <link href="http://tinyland.site/"/>
   <updated>2017-06-15T16:15:22.081Z</updated>
-  <id>http://jichong.tech/</id>
+  <id>http://tinyland.site/</id>
   
   <author>
     <name>小路</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://jichong.tech/2014/12/22/hello-world/"/>
-    <id>http://jichong.tech/2014/12/22/hello-world/</id>
+    <link href="http://tinyland.site/2014/12/22/hello-world/"/>
+    <id>http://tinyland.site/2014/12/22/hello-world/</id>
     <published>2014-12-22T04:39:04.000Z</published>
     <updated>2017-06-15T16:15:22.081Z</updated>
     
@@ -39,12 +39,12 @@
     
     </summary>
     
-      <category term="Diary" scheme="http://jichong.tech/categories/Diary/"/>
+      <category term="Diary" scheme="http://tinyland.site/categories/Diary/"/>
     
     
-      <category term="PS3" scheme="http://jichong.tech/tags/PS3/"/>
+      <category term="PS3" scheme="http://tinyland.site/tags/PS3/"/>
     
-      <category term="Games" scheme="http://jichong.tech/tags/Games/"/>
+      <category term="Games" scheme="http://tinyland.site/tags/Games/"/>
     
   </entry>
   
