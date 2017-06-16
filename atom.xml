@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小路</title>
-  <subtitle>subsubsubsssss</subtitle>
+  <subtitle>博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://tinyland.site/2014/12/22/hello-world/"/>
-    <id>http://tinyland.site/2014/12/22/hello-world/</id>
+    <link href="http://tinyland.site/2014/12/22/hello-world.html"/>
+    <id>http://tinyland.site/2014/12/22/hello-world.html</id>
     <published>2014-12-22T04:39:04.000Z</published>
     <updated>2017-06-16T09:41:51.246Z</updated>
     
