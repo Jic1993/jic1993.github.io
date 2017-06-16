@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
-  <updated>2017-06-16T09:41:51.246Z</updated>
+  <updated>2017-06-16T14:57:33.913Z</updated>
   <id>http://tinyland.site/</id>
   
   <author>
@@ -16,9 +16,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>how to build blog怎么样构建博客</title>
+    <link href="http://tinyland.site/posts/2017-06-16-how-to-build-blog.html"/>
+    <id>http://tinyland.site/posts/2017-06-16-how-to-build-blog.html</id>
+    <published>2017-06-16T14:44:27.000Z</published>
+    <updated>2017-06-16T14:57:33.913Z</updated>
+    
+    <content type="html"><![CDATA[<p>叭叭叭<br><a id="more"></a><br>叭叭叭<br>叭叭叭<br>叭叭叭</p>
+<p>叭叭叭</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;叭叭叭&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="http://tinyland.site/2014/12/22/hello-world.html"/>
-    <id>http://tinyland.site/2014/12/22/hello-world.html</id>
+    <link href="http://tinyland.site/posts/2014-12-22-hello-world.html"/>
+    <id>http://tinyland.site/posts/2014-12-22-hello-world.html</id>
     <published>2014-12-22T04:39:04.000Z</published>
     <updated>2017-06-16T09:41:51.246Z</updated>
     
