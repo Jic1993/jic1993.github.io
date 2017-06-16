@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tinyland.site/tags/index.html</loc>
+    
+    <lastmod>2017-06-16T09:35:32.241Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://tinyland.site/categories/index.html</loc>
+    
+    <lastmod>2017-06-16T09:35:18.025Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tinyland.site/about/index.html</loc>
     
-    <lastmod>2017-06-16T09:09:10.821Z</lastmod>
+    <lastmod>2017-06-16T09:35:09.494Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>http://tinyland.site/2014/12/22/hello-world/</loc>
     
     <lastmod>2017-06-15T16:15:22.081Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tinyland.site/categories/index.html</loc>
-    
-    <lastmod>2017-06-15T16:07:28.878Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tinyland.site/tags/index.html</loc>
-    
-    <lastmod>2017-06-15T16:06:54.778Z</lastmod>
     
   </url>
   
