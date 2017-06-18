@@ -4,15 +4,18 @@
 
     
   <url>
-    <loc>http://tinyland.site/posts/2017-06-16-how-to-build-blog.html</loc>
-    <lastmod>2017-06-16T14:57:33.913Z</lastmod>
+    <loc>http://tinyland.site/posts/2014-12-22-hello-world.html</loc>
+    <lastmod>2017-06-18T17:02:59.893Z</lastmod>
     <data>
         <display>
-        <title>how to build blog怎么样构建博客</title>
-        <pubTime>2017-06-16T14:44:27.000Z</pubTime>
+        <title>Hello World</title>
+        <pubTime>2014-12-22T04:39:04.000Z</pubTime>
         
          
            
+             
+              <breadCrumb title="Other" url="http://tinyland.site/categories/Other/"/>
+          
         </display>
     </data>
     </url>
@@ -20,21 +23,26 @@
     
     
   <url>
-    <loc>http://tinyland.site/posts/2014-12-22-hello-world.html</loc>
-    <lastmod>2017-06-16T09:41:51.246Z</lastmod>
+    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
+    <lastmod>2017-06-18T16:56:56.173Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2014-12-22T04:39:04.000Z</pubTime>
+        <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
+        <pubTime>2017-06-18T16:23:16.000Z</pubTime>
         
-        <tag>PS3</tag>
+        <tag>OpenCV</tag>
          
-        <tag>Games</tag>
+        <tag>OCR</tag>
+         
+        <tag>场景文字识别</tag>
          
          
            
              
-              <breadCrumb title="Diary" url="http://tinyland.site/categories/Diary/"/>
+              <breadCrumb title="Study" url="http://tinyland.site/categories/Study/"/>
+          
+             
+              <breadCrumb title="Computer Vision" url="http://tinyland.site/categories/Study/Computer-Vision/"/>
           
         </display>
     </data>

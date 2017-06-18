@@ -78,15 +78,15 @@
 
 
 
-<meta name="description" content="想法满地跑，实现懒得搞">
+<meta name="description" content="想法满地跑，实现还没搞">
 <meta property="og:type" content="website">
 <meta property="og:title" content="小路">
 <meta property="og:url" content="http://tinyland.site/index.html">
 <meta property="og:site_name" content="小路">
-<meta property="og:description" content="想法满地跑，实现懒得搞">
+<meta property="og:description" content="想法满地跑，实现还没搞">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小路">
-<meta name="twitter:description" content="想法满地跑，实现懒得搞">
+<meta name="twitter:description" content="想法满地跑，实现还没搞">
 
 
 
@@ -295,7 +295,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://tinyland.site/posts/2017-06-16-how-to-build-blog.html">
+    <link itemprop="mainEntityOfPage" href="http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小路">
@@ -314,7 +314,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/posts/2017-06-16-how-to-build-blog.html" itemprop="url">how to build blog怎么样构建博客</a></h1>
+                <a class="post-title-link" href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html" itemprop="url">Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</a></h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T22:44:27+08:00">
-                2017-06-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T00:23:16+08:00">
+                2017-06-19
               </time>
             
 
@@ -338,13 +338,44 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-06-16T22:57:33+08:00">
-                2017-06-16
+              <time title="更新于" itemprop="dateModified" datetime="2017-06-19T00:56:56+08:00">
+                2017-06-19
               </time>
             
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Computer-Vision/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Vision</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -352,7 +383,7 @@
 
           
           
-             <span id="/posts/2017-06-16-how-to-build-blog.html" class="leancloud_visitors" data-flag-title="how to build blog怎么样构建博客">
+             <span id="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html" class="leancloud_visitors" data-flag-title="Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -375,7 +406,7 @@
                 </span>
                 
                 <span title="字数统计">
-                  15
+                  2,419
                 </span>
               
 
@@ -398,10 +429,13 @@
 
       
         
-          <p>叭叭叭<br>
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近做一些字符识别的事情，想试一下opencv_contrib里的<a href="https://github.com/opencv/opencv_contrib/tree/master/modules/text" target="_blank" rel="external">Text</a>(自然场景图像中的文本检测与识别)模块。</p>
+<p>我参照了网上的一些教程去编译opencv+opencv_contrib，但是最后去跑样例程序(比如<a href="https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/end_to_end_recognition.cpp" target="_blank" rel="external">end_to_end_recognition.cpp</a> ),在运行生成的<strong>exe</strong>文件时会提示<code>OCRTesseract(33): Tesseract not found.</code>类似的错误。</p>
+<p>其原因<sup><a href="https://stackoverflow.com/questions/33655610/opencv-tesseract/35012185#35012185" target="_blank" rel="external">1</a></sup>是Text模块中的字符识别部分使用的是<a href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="external">Tesseract OCR</a>，因此在使用CMake编译生成OpenCV项目文件时，应该确保它能找到Tesseract.<br>也就是需要先编译好Tesseract，接着告诉CMake你的Tesseract在哪(包括它的头文件<strong>.h</strong>以及<strong>lib</strong>文件)，然后再编译OpenCV.</p>
+<p>最终我得到的<strong>端到端字符识别效果图</strong>如下：<br><img src="http://upload-images.jianshu.io/upload_images/4066522-179cef6eae5a7888.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="End to End Scene Text识别结果"></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/posts/2017-06-16-how-to-build-blog.html#more" rel="contents">
+            <a class="btn" href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -490,8 +524,8 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-06-16T17:41:51+08:00">
-                2017-06-16
+              <time title="更新于" itemprop="dateModified" datetime="2017-06-19T01:02:59+08:00">
+                2017-06-19
               </time>
             
           </span>
@@ -507,8 +541,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Diary/" itemprop="url" rel="index">
-                    <span itemprop="name">Diary</span>
+                  <a href="/categories/Other/" itemprop="url" rel="index">
+                    <span itemprop="name">Other</span>
                   </a>
                 </span>
 
@@ -570,18 +604,14 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/posts/2014-12-22-hello-world.html#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -651,7 +681,7 @@
                alt="小路" />
           <p class="site-author-name" itemprop="name">小路</p>
            
-              <p class="site-description motion-element" itemprop="description">想法满地跑，实现懒得搞</p>
+              <p class="site-description motion-element" itemprop="description">想法满地跑，实现还没搞</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -670,7 +700,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -681,7 +711,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
