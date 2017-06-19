@@ -383,25 +383,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数统计">
-                  78
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -438,6 +419,22 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="小路 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -633,11 +630,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/users/af7349f7c143/" target="_blank" title="Jianshu">
+                <a href="http://www.jianshu.com/users/af7349f7c143/" target="_blank" title="简书">
                   
                     <i class="fa fa-fw fa-book"></i>
                   
-                  Jianshu
+                  简书
                 </a>
               </span>
             
@@ -657,7 +654,11 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.baidu.com/" title="Title" target="_blank" rel="external nofollow">Title</a>
+                  <a href="http://www.baidu.com/" title="Title2" target="_blank" rel="external nofollow">Title2</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com/" title="Title1" target="_blank" rel="external nofollow">Title1</a>
                 </li>
               
             </ul>

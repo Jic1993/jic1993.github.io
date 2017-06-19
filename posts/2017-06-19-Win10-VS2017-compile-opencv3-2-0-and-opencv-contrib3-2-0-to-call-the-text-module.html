@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4066522-327521d77e7c96c6.gif?imageMogr2/auto-orient/strip">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4066522-f5978617a618519b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4066522-cf60ec876e903e4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-06-19T04:13:59.240Z">
+<meta property="og:updated_time" content="2017-06-19T08:20:57.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块">
 <meta name="twitter:description" content="前言最近做一些字符识别的事情，想试一下opencv_contrib里的Text(自然场景图像中的文本检测与识别)模块。 我参照了网上的一些教程去编译opencv+opencv_contrib，但是最后去跑样例程序(比如end_to_end_recognition.cpp ),在运行生成的exe文件时会提示OCRTesseract(33): Tesseract not found.类似的错误。 其原">
@@ -348,7 +348,7 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-06-19T12:13:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-06-19T16:20:57+08:00">
                 2017-06-19
               </time>
             
@@ -406,25 +406,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数统计">
-                  2,475
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -458,7 +439,7 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-1f05c7505943e1a6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="install_vs"></p>
 <h1 id="编译Tesseract"><a href="#编译Tesseract" class="headerlink" title="编译Tesseract"></a>编译Tesseract</h1><p>下载完源代码之后，我习惯先创建3个文件夹 <code>sources, build 和 install</code>  分别用来存放解压出来的源代码、以及之后会编译输出的工程文件和安装文件。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-8d85d7e144b4c1c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3-folders"></p>
-<h2 id="使用CPPAN下载依赖包"><a href="#使用CPPAN下载依赖包" class="headerlink" title="使用CPPAN下载依赖包"></a>使用CPPAN下载依赖包</h2><p>在用CMake(cmake-gui)编译tesseract源代码之前，需要先用<strong>cppan</strong>下载依赖项，首先打开命令行提示工具(cmd)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">d:</div><div class="line">cd path_to_tesseract  //比如我的是 D:\Tesseract\sources</div><div class="line">cppan                 //下载依赖的软件包，如leptonica等</div></pre></td></tr></table></figure></p>
+<h2 id="使用CPPAN下载依赖包"><a href="#使用CPPAN下载依赖包" class="headerlink" title="使用CPPAN下载依赖包"></a>使用CPPAN下载依赖包</h2><p>在用CMake(cmake-gui)编译tesseract源代码之前，需要先用<strong>CPPAN</strong>下载依赖项，首先打开命令行提示工具(cmd)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">d:</div><div class="line">cd path_to_tesseract  //比如我的是 D:\Tesseract\sources</div><div class="line">cppan                 //下载依赖的软件包，如leptonica等</div></pre></td></tr></table></figure></p>
 <p><strong>CPPAN</strong>感觉就是一个C++的包管理器，类似于Java的Maven、JavaScript的npm.  我也是第一次接触，看了tesseract的官方<a href="https://github.com/tesseract-ocr/tesseract/wiki/Compiling#windows" target="_blank" rel="external">编译文档</a>才知道有这么个神奇的东西。<br>当在<code>tesseract</code>根目录下运行<code>cppan</code>时，它会读取<code>cppan.yml</code>文件中所规定的项目的依赖项（如下图所示），帮你下载好需要的依赖包和初始化编译器配置。具体可以参考<a href="https://github.com/cppan/cppan/blob/master/doc/getting_started.md" target="_blank" rel="external">CPPAN官方文档</a></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-a767c96ccc3c9999.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dependencies"></p>
 <h2 id="使用cmake-gui进行编译"><a href="#使用cmake-gui进行编译" class="headerlink" title="使用cmake-gui进行编译"></a>使用cmake-gui进行编译</h2><p>打开cmake-gui进行编译：</p>
@@ -479,7 +460,9 @@
 <li><strong>编译错误解决</strong>： 在编译生成过程中可能会遇到因为文件编码问题而产生的错误，一个出错的地方是<strong>pango-language-sample-table.h</strong> ，需要改成<strong>UTF-8</strong> 编码；另一个是<strong>equationdetect.cpp</strong>，需要改成<strong>ANSI/OEM-简体中文 GBK</strong>编码。</li>
 </ol>
 <p>有同学可能想说，那我<strong>直接点击仅生成INSTALL行不行？</strong> 你可以自己尝试一下，答案是不行的😂</p>
+<blockquote>
 <p>其实感觉这一套流程，和在<em>Linux</em>系统上用命令打<code>./configure, make, make install...</code>之类的应该是对应的，只是在<em>Windows</em>上改成了用CMake、VS等图形化界面地去完成了这些事情。</p>
+</blockquote>
 <p>有些尬尴的是，这个时候tesseract还不能用，主要是要解决两个问题：</p>
 <ol>
 <li><p>如果你在命令行中<code>install/bin</code>目录下输入<code>tesseract  phototest.tif stdout</code> （phototest是一张待识别的字符图片，stdout表示将识别结果输出到标准输出即在命令行中直接显示）， 会提示丢失<code>pvt.cppan.demo.danbloomberg.leptonica-1.74.4.dll</code>等一系列dll的错误。<br>这里我的解决办法比较笨（感觉应该可以通过一些配置，让VS自己拷贝过去），就是直接把<code>build/bin</code>下的dll全部拷贝过去，放到<code>install/bin</code>路径下。<br><img src="http://upload-images.jianshu.io/upload_images/4066522-87d2607cb2685d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tesseract_error"><br><img src="http://upload-images.jianshu.io/upload_images/4066522-1be6a43e2e64e0d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="phototest"><br><img src="http://upload-images.jianshu.io/upload_images/4066522-327521d77e7c96c6.gif?imageMogr2/auto-orient/strip" alt="copy_dlls.gif"></p>
@@ -547,8 +530,13 @@
 <li>在你的opencv_contrib的text模块的<code>samples</code>文件夹中(如<code>D:\OpenCV\sources\modules\contrib\modules\text\samples</code>)找到以下三个文件<strong>trained_classifierNM2.xml</strong>、<strong>trained_classifierNM1.xml</strong>和<strong>scenetext01.jpg</strong>，并拷贝到<code>x64/Release</code>目录</li>
 <li>在<code>x64/Release</code>目录中新建<code>tessdata</code>文件夹，然后将<a href="https://github.com/tesseract-ocr/tessdata/raw/3.04.00/eng.traineddata" target="_blank" rel="external">eng.traineddata</a>放进去。</li>
 </ol>
-<p>然后在命令行窗口中<code>x64/Release</code>目录下输入 <code>testCV scenetext01.jpg</code>，就大功告成了🎉~</p>
+<p>最后在命令行窗口中<code>x64/Release</code>目录下运行 <code>testCV scenetext01.jpg</code>，就大功告成了🎉~</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-cf60ec876e903e4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="test success!"></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://www.polarxiong.com/archives/Tesseract-3-05%E5%8F%8A%E4%B9%8B%E5%90%8E%E7%89%88%E6%9C%AC%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93DLL.html" target="_blank" rel="external">https://www.polarxiong.com/archives/Tesseract-3-05%E5%8F%8A%E4%B9%8B%E5%90%8E%E7%89%88%E6%9C%AC%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93DLL.html</a></li>
+<li><a href="https://segmentfault.com/a/1190000003496009" target="_blank" rel="external">https://segmentfault.com/a/1190000003496009</a></li>
+<li><a href="http://docs.opencv.org/master/d6/d8a/tutorial_windows_visual_studio_Opencv.html" target="_blank" rel="external">http://docs.opencv.org/master/d6/d8a/tutorial_windows_visual_studio_Opencv.html</a></li>
+</ul>
 
       
     </div>
@@ -563,6 +551,22 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="小路 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -764,11 +768,11 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.jianshu.com/users/af7349f7c143/" target="_blank" title="Jianshu">
+                <a href="http://www.jianshu.com/users/af7349f7c143/" target="_blank" title="简书">
                   
                     <i class="fa fa-fw fa-book"></i>
                   
-                  Jianshu
+                  简书
                 </a>
               </span>
             
@@ -788,7 +792,11 @@
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.baidu.com/" title="Title" target="_blank" rel="external nofollow">Title</a>
+                  <a href="http://www.baidu.com/" title="Title2" target="_blank" rel="external nofollow">Title2</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com/" title="Title1" target="_blank" rel="external nofollow">Title1</a>
                 </li>
               
             </ul>
@@ -810,7 +818,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装依赖"><span class="nav-number">2.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译Tesseract"><span class="nav-number">3.</span> <span class="nav-text">编译Tesseract</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用CPPAN下载依赖包"><span class="nav-number">3.1.</span> <span class="nav-text">使用CPPAN下载依赖包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用cmake-gui进行编译"><span class="nav-number">3.2.</span> <span class="nav-text">使用cmake-gui进行编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用VS编译生成debug和release库："><span class="nav-number">3.3.</span> <span class="nav-text">用VS编译生成debug和release库：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译opencv-opencv-contrib"><span class="nav-number">4.</span> <span class="nav-text">编译opencv+opencv_contrib</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试end-to-end-recognition"><span class="nav-number">5.</span> <span class="nav-text">测试end_to_end_recognition</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#把OpenCV库文件配置到到项目中："><span class="nav-number">5.1.</span> <span class="nav-text">把OpenCV库文件配置到到项目中：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装依赖"><span class="nav-number">2.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译Tesseract"><span class="nav-number">3.</span> <span class="nav-text">编译Tesseract</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用CPPAN下载依赖包"><span class="nav-number">3.1.</span> <span class="nav-text">使用CPPAN下载依赖包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用cmake-gui进行编译"><span class="nav-number">3.2.</span> <span class="nav-text">使用cmake-gui进行编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用VS编译生成debug和release库："><span class="nav-number">3.3.</span> <span class="nav-text">用VS编译生成debug和release库：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#编译opencv-opencv-contrib"><span class="nav-number">4.</span> <span class="nav-text">编译opencv+opencv_contrib</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#测试end-to-end-recognition"><span class="nav-number">5.</span> <span class="nav-text">测试end_to_end_recognition</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#把OpenCV库文件配置到到项目中："><span class="nav-number">5.1.</span> <span class="nav-text">把OpenCV库文件配置到到项目中：</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
