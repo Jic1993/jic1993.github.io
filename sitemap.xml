@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tinyland.site/about/index.html</loc>
+    
+    <lastmod>2017-06-20T05:56:29.288Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tinyland.site/baidu_verify_tA5iWC82IW.html</loc>
     
     <lastmod>2017-06-19T15:59:48.753Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://tinyland.site/posts/2014-12-22-hello-world.html</loc>
     
     <lastmod>2017-06-19T03:32:48.431Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tinyland.site/about/index.html</loc>
-    
-    <lastmod>2017-06-18T17:01:13.717Z</lastmod>
     
   </url>
   
