@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
+    
+    <lastmod>2017-06-20T13:26:01.649Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tinyland.site/about/index.html</loc>
     
     <lastmod>2017-06-20T06:05:53.313Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://tinyland.site/baidu_verify_tA5iWC82IW.html</loc>
     
     <lastmod>2017-06-19T15:59:48.753Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
-    
-    <lastmod>2017-06-19T14:33:19.981Z</lastmod>
     
   </url>
   

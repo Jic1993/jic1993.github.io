@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
-  <updated>2017-06-19T14:33:19.981Z</updated>
+  <updated>2017-06-20T13:26:01.649Z</updated>
   <id>http://tinyland.site/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html"/>
     <id>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</id>
     <published>2017-06-18T16:23:16.000Z</published>
-    <updated>2017-06-19T14:33:19.981Z</updated>
+    <updated>2017-06-20T13:26:01.649Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近做一些字符识别的事情，想试一下opencv_contrib里的<a href="https://github.com/opencv/opencv_contrib/tree/master/modules/text" target="_blank" rel="external">Text</a>(自然场景图像中的文本检测与识别)模块。</p>
 <p>我参照了网上的一些教程去编译opencv+opencv_contrib，但是最后去跑样例程序(比如<a href="https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/end_to_end_recognition.cpp" target="_blank" rel="external">end_to_end_recognition.cpp</a> ),在运行生成的<strong>exe</strong>文件时会提示<code>OCRTesseract(33): Tesseract not found.</code>类似的错误。</p>
@@ -44,7 +44,7 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-8d85d7e144b4c1c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3-folders"></p>
 <h2 id="使用CPPAN下载依赖包"><a href="#使用CPPAN下载依赖包" class="headerlink" title="使用CPPAN下载依赖包"></a>使用CPPAN下载依赖包</h2><p>在用CMake(cmake-gui)编译tesseract源代码之前，需要先用<strong>CPPAN</strong>下载依赖项，首先打开命令行提示工具(cmd)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">d:</div><div class="line">cd path_to_tesseract  //比如我的是 D:\Tesseract\sources</div><div class="line">cppan                 //下载依赖的软件包，如leptonica等</div></pre></td></tr></table></figure></p>
 <p><strong>CPPAN</strong>感觉就是一个C++的包管理器，类似于Java的Maven、JavaScript的npm.  我也是第一次接触，看了tesseract的官方<a href="https://github.com/tesseract-ocr/tesseract/wiki/Compiling#windows" target="_blank" rel="external">编译文档</a>才知道有这么个神奇的东西。<br>当在<code>tesseract</code>根目录下运行<code>cppan</code>时，它会读取<code>cppan.yml</code>文件中所规定的项目的依赖项（如下图所示），帮你下载好需要的依赖包和初始化编译器配置。具体可以参考<a href="https://github.com/cppan/cppan/blob/master/doc/getting_started.md" target="_blank" rel="external">CPPAN官方文档</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-a767c96ccc3c9999.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dependencies"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4066522-21562edafa00ac65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dependencies"></p>
 <h2 id="使用cmake-gui进行编译"><a href="#使用cmake-gui进行编译" class="headerlink" title="使用cmake-gui进行编译"></a>使用cmake-gui进行编译</h2><p>打开cmake-gui进行编译：</p>
 <ol>
 <li>在<strong>where is the source code</strong>中选择tesseract的源码路径，比如我的是<code>D:/Tesseract/sources</code></li>
@@ -66,9 +66,9 @@
 <blockquote>
 <p>其实感觉这一套流程，和在<em>Linux</em>系统上用命令打<code>./configure, make, make install...</code>之类的应该是对应的，只是在<em>Windows</em>上改成了用CMake、VS等图形化界面地去完成了这些事情。</p>
 </blockquote>
-<p>有些尬尴的是，这个时候tesseract还不能用，主要是要解决两个问题：</p>
+<p>有些尬尴的是，<strong>这个时候tesseract还不能用，主要是要解决两个问题</strong>：</p>
 <ol>
-<li><p>如果你在命令行中<code>install/bin</code>目录下输入<code>tesseract  phototest.tif stdout</code> （phototest是一张待识别的字符图片，stdout表示将识别结果输出到标准输出即在命令行中直接显示）， 会提示丢失<code>pvt.cppan.demo.danbloomberg.leptonica-1.74.4.dll</code>等一系列dll的错误。<br>这里我的解决办法比较笨（感觉应该可以通过一些配置，让VS自己拷贝过去），就是直接把<code>build/bin</code>下的dll全部拷贝过去，放到<code>install/bin</code>路径下。<br><img src="http://upload-images.jianshu.io/upload_images/4066522-87d2607cb2685d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tesseract_error"><br><img src="http://upload-images.jianshu.io/upload_images/4066522-1be6a43e2e64e0d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="phototest"><br><img src="http://upload-images.jianshu.io/upload_images/4066522-327521d77e7c96c6.gif?imageMogr2/auto-orient/strip" alt="copy_dlls.gif"></p>
+<li><p>如果你在命令行中<code>install/bin</code>目录下输入<code>tesseract  phototest.tif stdout</code> （phototest是一张待识别的字符图片，stdout表示将识别结果输出到标准输出即在命令行中直接显示）， 会提示丢失<code>pvt.cppan.demo.danbloomberg.leptonica-1.74.4.dll</code>等一系列dll的错误。<br>这里我的解决办法比较笨（感觉应该可以通过一些配置，让VS自己拷贝过去），就是直接把<code>build/bin</code>下的dll全部拷贝过去，放到<code>install/bin</code>路径下。<br><img src="http://upload-images.jianshu.io/upload_images/4066522-87d2607cb2685d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tesseract_error"><br><img src="http://upload-images.jianshu.io/upload_images/4066522-1be6a43e2e64e0d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="phototest"><br><img src="http://upload-images.jianshu.io/upload_images/4066522-47129641714f68d5.gif?imageMogr2/auto-orient/strip" alt="copy_dlls.gif"></p>
 </li>
 <li><p>再次执行<code>tesseract  phototest.tif stdout</code>，会提示如下所示的另一个问题，找不到训练数据文件<code>\Tesseract\install\bin\tessdata/eng.traineddata</code>.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">D:\Tesseract\install\bin&gt;tesseract phototest.tif stdout</div><div class="line">Error opening data file \Tesseract\install\bin\tessdata/eng.traineddata</div><div class="line">Please make sure the TESSDATA_PREFIX environment variable is set to the parent directory of your &quot;tessdata&quot; directory.</div><div class="line">Failed loading language &apos;eng&apos;</div><div class="line">Tesseract couldn&apos;t load any languages!</div><div class="line">Could not initialize tesseract.</div></pre></td></tr></table></figure>
@@ -110,12 +110,19 @@
 </tr>
 </tbody>
 </table>
-<p>（注意：1.在使用cmake-gui的时候可能需要多点几次<code>Configure</code>，因为有些配置项一开始可能找不到。 2.在用VS生成OpenCV库文件时，根据不同的编译模式需要指定对应的tesseract的 <strong>lib</strong> 文件，tesseract305.lib表示release版本，后面加d的tesseract305d.lib为debug版本。 3.opencv_contrib解压出来的文件名是opencv_contrib_3.2.0,我改成了contrib）</p>
+<p>注：</p>
+<ol>
+<li>在使用cmake-gui的时候可能需要多点几次<code>Configure</code>，因为有些配置项一开始可能找不到。</li>
+<li>在用VS生成OpenCV库文件时，根据不同的编译模式需要指定对应的tesseract的 <strong>lib</strong> 文件，tesseract305.lib表示release版本，后面加d的tesseract305d.lib为debug版本。</li>
+<li>opencv_contrib解压出来的文件名是opencv_contrib_3.2.0,我改成了contrib.</li>
+</ol>
 <p>完成之后同样将OpenCV的<code>bin</code>路径（例如<code>D:\OpenCV\install\x64\vc15\bin</code>）加入环境变量<strong>PATH</strong>，否则运行生成的<strong>exe</strong>时，会提示找不到相关的 <strong>dll</strong> 文件。因为你需要把路径写入到<strong>PATH</strong>，操作系统才知道要去哪里加载它们<strong><sup><a href="http://docs.opencv.org/master/d3/d52/tutorial_windows_install.html#tutorial_windows_install_path" target="_blank" rel="external"> [2] </a></sup></strong>。</p>
 <p>故事进行到这里所有的编译工作就已经结束了，下面就可以开启新篇章，开始在vs中跑样例程序了😁</p>
 <hr>
 <h1 id="测试end-to-end-recognition"><a href="#测试end-to-end-recognition" class="headerlink" title="测试end_to_end_recognition"></a>测试end_to_end_recognition</h1><p>首先新建一个VS工程(例如叫 <strong>textCV</strong> )，空项目就行。新建一个源文件，例如<code>source.cpp</code>，把<a href="https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/end_to_end_recognition.cpp" target="_blank" rel="external">end_to_end_recognition.cpp</a> 里的代码拷贝进去。</p>
-<h2 id="把OpenCV库文件配置到到项目中"><a href="#把OpenCV库文件配置到到项目中" class="headerlink" title="把OpenCV库文件配置到到项目中"></a>把OpenCV库文件配置到到项目中</h2><p>这步的目的是要告诉VS你的opencv头文件和lib库在哪，否则没法编译生成<strong>EXE</strong>可执行文件<strong><sup><a href="http://docs.opencv.org/master/d6/d8a/tutorial_windows_visual_studio_Opencv.html" target="_blank" rel="external"> [3] </a></sup></strong>。</p>
+<h2 id="把OpenCV库文件配置到到项目中："><a href="#把OpenCV库文件配置到到项目中：" class="headerlink" title="把OpenCV库文件配置到到项目中："></a>把OpenCV库文件配置到到项目中：</h2><blockquote>
+<p>这步的目的大概就是<strong>告诉VS你的opencv头文件和lib库在哪</strong>，否则没法编译生成<strong>EXE</strong>可执行文件<strong><sup><a href="http://docs.opencv.org/master/d6/d8a/tutorial_windows_visual_studio_Opencv.html" target="_blank" rel="external"> [3] </a></sup></strong>。</p>
+</blockquote>
 <p>我是通过添加本地项目属性表来实现的，首先点击<strong>视图 –&gt;属性管理器</strong>，接着点开属性管理器页面，找到<strong>Release|x64</strong> 右键<strong>添加新项目属性表</strong>，然后在新建的属性表上<strong>右键–&gt;属性</strong>， 在弹出的属性配置页面，做如下配置：</p>
 <ol>
 <li><p><strong>C/C++目录–&gt;通用–&gt;附加包含目录</strong>，添加opencv头文件目录(共3个)，例如：</p>
@@ -127,7 +134,7 @@
 </li>
 </ol>
 <p>P.S. 可以在<em>Windows</em>命令行中用<code>tree /F</code>得到一个文件夹下的所有文件名<strong><sup><a href="http://jingyan.baidu.com/article/b24f6c822acbbb86bee5da75.html" target="_blank" rel="external"> [4] </a></sup></strong>。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-9a2479895d1b2190.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tree"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4066522-f76a1d13e48877b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tree"></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-f5978617a618519b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="property_sheet"></p>
 <h2 id="运行样例程序"><a href="#运行样例程序" class="headerlink" title="运行样例程序"></a>运行样例程序</h2><p>配置完成后点击<strong>生成–&gt;生成解决方案</strong>，VS会在项目文件夹的<code>x64/Release</code>目录下生成<strong>textCV.exe</strong></p>
 <p>此时还需要做最后两件事就是，就是拷贝以下文件到<strong>textCV.exe</strong>所在文件目录：</p>
