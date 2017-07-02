@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
-  <updated>2017-06-20T13:26:01.649Z</updated>
+  <updated>2017-07-02T16:12:09.735Z</updated>
   <id>http://tinyland.site/</id>
   
   <author>
@@ -14,6 +14,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lissajous曲线动画演示（Maltab实现）</title>
+    <link href="http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html"/>
+    <id>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</id>
+    <published>2017-07-02T15:58:54.000Z</published>
+    <updated>2017-07-02T16:12:09.735Z</updated>
+    
+    <content type="html"><![CDATA[<p>在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip" alt="最终效果"></p>
+<a id="more"></a>
+<hr>
+<h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><ul>
+<li>环境： Matlab R2017a</li>
+</ul>
+<h3 id="Animated-Line-实现动画效果"><a href="#Animated-Line-实现动画效果" class="headerlink" title="Animated Line 实现动画效果"></a>Animated Line 实现动画效果</h3><p>用<code>animatedline</code>首先创建初始动画线条对象<strong><sup><a href="https://cn.mathworks.com/help/matlab/ref/animatedline.html" target="_blank" rel="external"> [1] </a></sup></strong>，接着在循环中动态地向线条中添加点，并使用 <code>drawnow</code> 在屏幕上显示该新添加的点，然后用<code>getframe</code>捕获的当前图像。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%%</span></div><div class="line"><span class="comment">% Create a new figure window,</span></div><div class="line"><span class="comment">% Background color is white</span></div><div class="line"><span class="comment">% MenuBar is hidden</span></div><div class="line"><span class="comment">% Image size is 480*480</span></div><div class="line">figure(<span class="string">'Color'</span>,<span class="string">'w'</span>,<span class="string">'MenuBar'</span>,<span class="string">'none'</span>,<span class="string">'InnerPosition'</span>,[<span class="number">0</span> <span class="number">0</span> <span class="number">480</span> <span class="number">480</span>]);</div><div class="line">co = [<span class="number">65</span>/<span class="number">255</span>, <span class="number">131</span>/<span class="number">255</span>, <span class="number">196</span>/<span class="number">255</span>]; <span class="comment">% specify the color</span></div><div class="line"><span class="comment">% Create animated line object</span></div><div class="line">headMarker = animatedline(<span class="string">'LineStyle'</span>,<span class="string">'none'</span>,<span class="string">'Marker'</span>,<span class="string">'o'</span>,<span class="string">'Color'</span>,co,<span class="string">'MarkerFaceColor'</span>,co);</div><div class="line">body = animatedline(<span class="string">'LineStyle'</span>,<span class="string">'-'</span>,<span class="string">'LineWidth'</span>,<span class="number">1.3</span>,<span class="string">'Color'</span>,co); <span class="comment">% trajectory</span></div><div class="line">axis([<span class="number">-1</span>,<span class="number">1</span>,<span class="number">-1</span>,<span class="number">1</span>]); axis off; <span class="comment">% hide axis</span></div><div class="line"></div><div class="line"><span class="comment">%%</span></div><div class="line"><span class="comment">% Parameters</span></div><div class="line">a = <span class="number">13</span>;</div><div class="line">b = <span class="number">18</span>;</div><div class="line">phi = <span class="built_in">pi</span> * <span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="comment">% Parametric Equation of Lissajous Curve</span></div><div class="line">t = <span class="built_in">linspace</span>(<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">pi</span>,<span class="number">1000</span>); <span class="comment">% generate 1000 linearly equally spaced points</span></div><div class="line">x = <span class="built_in">sin</span>(a*t);</div><div class="line">y = <span class="built_in">sin</span>(b*t+ phi);</div><div class="line"></div><div class="line"><span class="comment">%%</span></div><div class="line"><span class="comment">% Display</span></div><div class="line"><span class="keyword">for</span> idx = <span class="number">1</span>:<span class="built_in">length</span>(t)</div><div class="line">    addpoints(headMarker,x(idx),y(idx));</div><div class="line">    addpoints(body,x(idx),y(idx));</div><div class="line">    drawnow</div><div class="line">    <span class="comment">% Capture the current plot</span></div><div class="line">    frame = getframe; <span class="comment">% snapshot of the current axes</span></div><div class="line">    im&#123;idx&#125; = frame2im(frame); <span class="comment">% write image data to `im`</span></div><div class="line">    <span class="comment">% Remove previous head marker except for the last one</span></div><div class="line">    <span class="keyword">if</span> idx~=<span class="built_in">length</span>(t)</div><div class="line">        clearpoints(headMarker);</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h3 id="写入GIF动图"><a href="#写入GIF动图" class="headerlink" title="写入GIF动图"></a>写入GIF动图</h3><p>将<code>getframe</code>捕获的每一个图像，写入 <strong>GIF</strong> 动画文件<strong><sup><a href="https://cn.mathworks.com/help/matlab/ref/imwrite.html?searchHighlight=gifs&amp;s_tid=doc_srchtitle#btv452g-1" target="_blank" rel="external"> [2] </a></sup></strong>。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">%%</span></div><div class="line"><span class="comment">% Save images into a GIF file.</span></div><div class="line"><span class="comment">% Because three-dimensional data is not supported for GIF files,</span></div><div class="line"><span class="comment">% call rgb2ind to convert the RGB data in the image to an indexed image A with a colormap map.</span></div><div class="line">filename = <span class="string">'Lissajous.gif'</span>; <span class="comment">% specify the output file name</span></div><div class="line"><span class="keyword">for</span> idx = <span class="number">1</span>:<span class="built_in">length</span>(t)</div><div class="line">    [A,map] = rgb2ind(im&#123;idx&#125;,<span class="number">256</span>);</div><div class="line">    <span class="keyword">if</span> idx == <span class="number">1</span></div><div class="line">        <span class="comment">%Set DelayTime = 0 to display next images as fast as your hardware allows</span></div><div class="line">        imwrite(A,map,filename,<span class="string">'gif'</span>,<span class="string">'LoopCount'</span>,Inf,<span class="string">'DelayTime'</span>,<span class="number">0</span>);</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="comment">% To append multiple images to the first image</span></div><div class="line">        imwrite(A,map,filename,<span class="string">'gif'</span>,<span class="string">'WriteMode'</span>,<span class="string">'append'</span>,<span class="string">'DelayTime'</span>,<span class="number">0</span>);</div><div class="line">    <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="http://www.matrix67.com/blog/archives/6947" target="_blank" rel="external">http://www.matrix67.com/blog/archives/6947</a></li>
+<li><a href="https://codepen.io/handsomeone/full/Kgmbqg" target="_blank" rel="external">https://codepen.io/handsomeone/full/Kgmbqg</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip&quot; alt=&quot;最终效果&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Study" scheme="http://tinyland.site/categories/Study/"/>
+    
+      <category term="Math" scheme="http://tinyland.site/categories/Study/Math/"/>
+    
+    
+      <category term="matlab" scheme="http://tinyland.site/tags/matlab/"/>
+    
+      <category term="lissajous" scheme="http://tinyland.site/tags/lissajous/"/>
+    
+      <category term="animation" scheme="http://tinyland.site/tags/animation/"/>
+    
+  </entry>
   
   <entry>
     <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
