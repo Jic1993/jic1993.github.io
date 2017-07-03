@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
-  <updated>2017-07-03T11:37:48.567Z</updated>
+  <updated>2017-07-03T11:51:18.542Z</updated>
   <id>http://tinyland.site/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html"/>
     <id>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</id>
     <published>2017-07-02T15:58:54.000Z</published>
-    <updated>2017-07-03T11:37:48.567Z</updated>
+    <updated>2017-07-03T11:51:18.542Z</updated>
     
     <content type="html"><![CDATA[<p>在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip" alt="最终效果"></p>
@@ -30,9 +30,9 @@
 <p><img src="http://latex.codecogs.com/svg.latex?\begin{cases}x=A\sin(at+\varphi)\\y=B\sin(bt)\end{cases}" alt="Parametric Equation"></p>
 <p>纳撒尼尔·鲍迪奇（Nathaniel Bowditch）在1815年首先研究了这一曲线族，之后在1857年由朱尔斯·安东尼·利萨如（Jules Antoine Lissajous）进行了更详细地研究。</p>
 <p>在物理上，Lissajous曲线可以看作是一个质点同时在X轴和Y轴方向上做简谐运动形成的运动轨迹（以我仅剩的一点物理知识来说，这大概是叫”运动的合成”）。<br>当这两个相互垂直方向上的简谐振动的频率为任意值时，那么它们合成的运动可能会比较复杂，轨迹是不稳定的。（关于<em>稳定</em>，我的理解大概就是呈<strong>周期性</strong>吧）</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-f7e3b069628c8b17.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4066522-98fbc456370c0767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt=""></p>
 <p>而如果这两个振动的频率成简单整数比，就能合成一个规则的、稳定的闭合曲线，这就是Lissajous曲线（见下图）。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-262e4557cbc35261.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt=""></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4066522-514e05d6c1e190c6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt=""></p>
 <h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><ul>
 <li>环境： Matlab R2017a</li>
 </ul>
