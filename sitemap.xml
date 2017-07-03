@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://tinyland.site/about/index.html</loc>
+    
+    <lastmod>2017-07-03T14:22:05.667Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</loc>
     
     <lastmod>2017-07-03T14:13:43.896Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
     
     <lastmod>2017-06-20T13:26:01.649Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://tinyland.site/about/index.html</loc>
-    
-    <lastmod>2017-06-20T06:05:53.313Z</lastmod>
     
   </url>
   
