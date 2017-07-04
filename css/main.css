@@ -179,13 +179,9 @@ td,
 th {
   padding: 0;
 }
-::selection {
-  background: #262a30;
-  color: #fff;
-}
 body {
   position: relative;
-  font-family: "Microsoft YaHei", Verdana, sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 16px;
   line-height: 2;
   color: #555;
@@ -475,14 +471,14 @@ pre,
   overflow: auto;
   margin: 20px 0;
   padding: 0;
-  font-size: 13px;
+  font-size: 14px;
   color: #4d4d4c;
   background: #f7f7f7;
   line-height: 1.6;
 }
 pre,
 code {
-  font-family: "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+  font-family: Lucida Console, Input Mono, PT Mono, Consolas, Monaco, Menlo, monospace;
 }
 code {
   padding: 2px 4px;
@@ -490,7 +486,7 @@ code {
   color: #555;
   background: #eee;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 14px;
 }
 pre code {
   padding: 0;
@@ -1000,7 +996,7 @@ pre .javascript .function {
   line-height: 36px;
   font-size: 20px;
   font-weight: normal;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1088,7 +1084,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Palatino Linotype, Palatino, Times New Roman, Microsoft YaHei, Verdana, sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1361,7 +1357,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Palatino Linotype, Palatino, Times New Roman, Microsoft YaHei, Verdana, sans-serif;
   font-size: 12px;
   text-align: center;
 }
@@ -2901,9 +2897,15 @@ code {
   background: #fff;
   margin: 2px;
 }
+.highlight {
+  background: #fff;
+}
+.highlight .code pre {
+  background: #fff;
+}
 大代码块的自定义样式,
-.highlight,
-pre {
+pre,
+.highlight {
   margin: 5px 0;
   padding: 5px;
   border-radius: 3px;
