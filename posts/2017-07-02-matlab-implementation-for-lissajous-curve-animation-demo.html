@@ -78,21 +78,17 @@
 
 
 
-<meta name="description" content="在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。">
+<meta name="description" content="在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。   最终效果">
 <meta name="keywords" content="matlab,lissajous,animation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lissajous曲线动画演示（Maltab实现）">
 <meta property="og:url" content="http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html">
 <meta property="og:site_name" content="小路">
-<meta property="og:description" content="在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4066522-98fbc456370c0767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4066522-514e05d6c1e190c6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480">
-<meta property="og:updated_time" content="2017-07-03T14:13:43.896Z">
+<meta property="og:description" content="在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。   最终效果">
+<meta property="og:updated_time" content="2017-07-04T09:34:20.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lissajous曲线动画演示（Maltab实现）">
-<meta name="twitter:description" content="在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip">
+<meta name="twitter:description" content="在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。   最终效果">
 
 
 
@@ -350,8 +346,8 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-03T22:13:43+08:00">
-                2017-07-03
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-04T17:34:20+08:00">
+                2017-07-04
               </time>
             
           </span>
@@ -422,17 +418,29 @@
 
       
         <p>在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip" alt="最终效果
-"></p>
+<!-- ![最终效果](http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip) -->
+<p><img class="lazy" data-original="http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip" width="480"></p>
+<p class="image-caption">最终效果</p>
+
+
 <a id="more"></a>
 <hr>
 <h1 id="Lissajous曲线"><a href="#Lissajous曲线" class="headerlink" title="Lissajous曲线"></a>Lissajous曲线</h1><p>在数学上，Lissajous曲线（又称Lissajous图形或Bowditch曲线）是由如下参数方程构成的曲线族的图形<strong><sup><a href="https://en.wikipedia.org/wiki/Lissajous_curve" target="_blank" rel="external"> [1] </a></sup></strong></p>
 <p>$$<br>\begin{cases}<br>    x=A\sin(at+\varphi)\\<br>    y=B\sin(bt)<br>\end{cases}<br>$$</p>
 <p>纳撒尼尔·鲍迪奇（Nathaniel Bowditch）在1815年首先研究了这一曲线族，之后在1857年由朱尔斯·安东尼·利萨如（Jules Antoine Lissajous）进行了更详细的研究。</p>
 <p>在物理上，Lissajous曲线可以看作是一个质点同时在X轴和Y轴方向上做简谐运动形成的运动轨迹（以我仅剩的一点物理知识来说，这大概是叫”运动的合成”）。<br>当这两个相互垂直方向上的简谐振动的频率为任意值时，那么它们合成的运动可能会比较复杂，轨迹是不稳定的，示意图如下。（关于<em>稳定</em>，我的理解大概就是呈<strong>周期性</strong>吧）</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-98fbc456370c0767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt="一个示意图"></p>
+<!-- ![一个示意图](http://upload-images.jianshu.io/upload_images/4066522-98fbc456370c0767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480) -->
+<p><img class="lazy" data-original="http://upload-images.jianshu.io/upload_images/4066522-98fbc456370c0767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" width="480"></p>
+<p class="image-caption">一个示意图</p>
+
+
+
 <p>而如果这两个振动的频率成简单的整数比，就能合成一个规则的、稳定的闭合曲线，这就是Lissajous曲线（示意图如下）。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4066522-514e05d6c1e190c6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" alt="另一个示意图"></p>
+<!-- ![另一个示意图](http://upload-images.jianshu.io/upload_images/4066522-514e05d6c1e190c6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480) -->
+<p><img class="lazy" data-original="http://upload-images.jianshu.io/upload_images/4066522-514e05d6c1e190c6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/480" width="480"></p>
+<p class="image-caption">另一个示意图</p>
+
+
 <h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><ul>
 <li>环境： Matlab R2017a</li>
 </ul>
@@ -853,6 +861,20 @@
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
+
+<script>
+$(function() {
+    $("img.lazy").lazyload({
+        event : "sporty"
+    });
+});
+
+$(window).bind("load", function() {
+    var timeout = setTimeout(function() {
+        $("img.lazy").trigger("sporty")
+    }, 5000);
+});
+</script>
 
 
   
