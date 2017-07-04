@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
+    <lastmod>2017-07-04T16:06:30.360Z</lastmod>
+    <data>
+        <display>
+        <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
+        <pubTime>2017-06-18T16:23:16.000Z</pubTime>
+        
+        <tag>opencv</tag>
+         
+        <tag>ocr</tag>
+         
+        <tag>tesseract</tag>
+         
+        <tag>场景文字识别</tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="http://tinyland.site/categories/Study/"/>
+          
+             
+              <breadCrumb title="Computer Vision" url="http://tinyland.site/categories/Study/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</loc>
     <lastmod>2017-07-04T09:34:20.071Z</lastmod>
     <data>
@@ -45,35 +74,6 @@
            
              
               <breadCrumb title="Other" url="http://tinyland.site/categories/Other/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
-    <lastmod>2017-06-20T13:26:01.649Z</lastmod>
-    <data>
-        <display>
-        <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
-        <pubTime>2017-06-18T16:23:16.000Z</pubTime>
-        
-        <tag>opencv</tag>
-         
-        <tag>ocr</tag>
-         
-        <tag>tesseract</tag>
-         
-        <tag>场景文字识别</tag>
-         
-         
-           
-             
-              <breadCrumb title="Study" url="http://tinyland.site/categories/Study/"/>
-          
-             
-              <breadCrumb title="Computer Vision" url="http://tinyland.site/categories/Study/Computer-Vision/"/>
           
         </display>
     </data>
