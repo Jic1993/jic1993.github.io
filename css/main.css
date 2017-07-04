@@ -478,7 +478,7 @@ pre,
 }
 pre,
 code {
-  font-family: Lucida Console, Input Mono, PT Mono, Consolas, Monaco, Menlo, monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 code {
   padding: 2px 4px;
@@ -1084,7 +1084,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .post-body {
-  font-family: Palatino Linotype, Palatino, Times New Roman, Microsoft YaHei, Verdana, sans-serif;
+  font-family: -apple-system, PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica Neue, sans-serif;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1357,7 +1357,7 @@ pre .javascript .function {
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   color: #999;
-  font-family: Palatino Linotype, Palatino, Times New Roman, Microsoft YaHei, Verdana, sans-serif;
+  font-family: -apple-system, PingFang SC, Hiragino Sans GB, Arial, Microsoft YaHei, Helvetica Neue, sans-serif;
   font-size: 12px;
   text-align: center;
 }
