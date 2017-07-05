@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
-    <lastmod>2017-07-05T08:58:23.741Z</lastmod>
+    <loc>http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html</loc>
+    <lastmod>2017-07-05T10:28:05.552Z</lastmod>
     <data>
         <display>
-        <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
-        <pubTime>2017-06-18T16:23:16.000Z</pubTime>
+        <title>VS调用opencv_contrib3.2.0的text模块（简易版）</title>
+        <pubTime>2017-07-05T08:47:53.000Z</pubTime>
         
         <tag>opencv</tag>
          
@@ -17,7 +17,7 @@
          
         <tag>tesseract</tag>
          
-        <tag>场景文字识别</tag>
+        <tag>text</tag>
          
          
            
@@ -33,12 +33,12 @@
 
     
   <url>
-    <loc>http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html</loc>
-    <lastmod>2017-07-05T08:54:54.494Z</lastmod>
+    <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
+    <lastmod>2017-07-05T08:58:23.741Z</lastmod>
     <data>
         <display>
-        <title>VS调用opencv_contrib3.2.0的text模块（简易版）</title>
-        <pubTime>2017-07-05T08:47:53.000Z</pubTime>
+        <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
+        <pubTime>2017-06-18T16:23:16.000Z</pubTime>
         
         <tag>opencv</tag>
          
@@ -46,7 +46,7 @@
          
         <tag>tesseract</tag>
          
-        <tag>text</tag>
+        <tag>场景文字识别</tag>
          
          
            

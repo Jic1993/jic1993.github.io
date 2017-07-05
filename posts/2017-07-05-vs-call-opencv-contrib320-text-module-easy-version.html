@@ -78,17 +78,17 @@
 
 
 
-<meta name="description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（非编译版本，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件就行了">
+<meta name="description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（不需要手动编译，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件，">
 <meta name="keywords" content="opencv,ocr,tesseract,text">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VS调用opencv_contrib3.2.0的text模块（简易版）">
 <meta property="og:url" content="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html">
 <meta property="og:site_name" content="小路">
-<meta property="og:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（非编译版本，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件就行了">
-<meta property="og:updated_time" content="2017-07-05T08:54:54.494Z">
+<meta property="og:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（不需要手动编译，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件，">
+<meta property="og:updated_time" content="2017-07-05T10:28:05.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VS调用opencv_contrib3.2.0的text模块（简易版）">
-<meta name="twitter:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（非编译版本，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件就行了">
+<meta name="twitter:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（不需要手动编译，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件，">
 
 
 
@@ -346,7 +346,7 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-07-05T16:54:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-05T18:28:05+08:00">
                 2017-07-05
               </time>
             
@@ -418,9 +418,9 @@
 
       
         <blockquote>
-<p>本文是作为上一篇文章<a href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html">《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》</a>的补充（非编译版本，更简洁一些）</p>
+<p>本文是作为上一篇文章<a href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html">《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》</a>的补充（不需要手动编译，更简洁一些）</p>
 </blockquote>
-<p>之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是<strong>太繁琐</strong>，这里我找到了一个更简洁的方法<strong><sup><a href="https://github.com/hsed/opencv-ocr" target="_blank" rel="external"> [1] </a></sup></strong>，不需要编译，就可以直接跑起来。(就是<strong>“</strong>盗用<strong>”</strong>别人编译好的二进制文件就行了😁)</p>
+<p>之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是<strong>太繁琐</strong>，这里我找到了一个更简洁的方法<strong><sup><a href="https://github.com/hsed/opencv-ocr" target="_blank" rel="external"> [1] </a></sup></strong>，不需要编译，就可以直接跑起来。(就是<strong>“</strong>盗用<strong>”</strong>别人编译好的二进制文件，接着稍微配置配置就行了😁)</p>
 <a id="more"></a>
 <h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><ul>
 <li>安装 Tesseract3.05（确保您在安装程序中选择“添加到路径”）</li>
@@ -430,13 +430,13 @@
 <li>在<strong>项目属性 –&gt; 链接器 –&gt; 常规 –&gt; 附加库目录</strong>中添加 opencv lib 目录</li>
 <li>添加 opencv lib 文件：<ul>
 <li>进入 opencv lib 文件夹</li>
-<li>打开 cmd，输入<code>dir / b * d.lib&gt; libs.txt</code>（这是用于调试模式的libs）</li>
+<li>打开 cmd，输入<code>dir / b * d.lib&gt; libs.txt</code>（这是用于<em>Debug</em>模式的libs）</li>
 <li>打开 <em>libs.txt</em> 并复制/粘贴到<strong>项目属性 –&gt; 链接器 –&gt; 输入 –&gt; 附加依赖项</strong></li>
 </ul>
 </li>
 <li>在 <strong>Debug</strong> 模式下运行！</li>
 </ul>
-<p>注：如果找不到 Tesseract3.05 的安装文件， 我这里提供了一个百度盘 <a href="http://pan.baidu.com/s/1i59n2Hf" target="_blank" rel="external">http://pan.baidu.com/s/1i59n2Hf</a> ，供下载^^。（记得将<strong>bin</strong>目录加入到<strong>PATH</strong>）</p>
+<p>注：如果找不到 Tesseract3.05 的安装文件， 我这里提供了一个百度盘 <a href="http://pan.baidu.com/s/1i59n2Hf" target="_blank" rel="external">http://pan.baidu.com/s/1i59n2Hf</a> ，供下载^^。（记得将<strong>bin</strong>路径加入到<strong>PATH</strong>）</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="https://github.com/hsed/opencv-ocr" target="_blank" rel="external">https://github.com/hsed/opencv-ocr</a></li>
 <li><a href="https://github.com/cesardelgadof/OpenCVBinaries" target="_blank" rel="external">https://github.com/cesardelgadof/OpenCVBinaries</a></li>
