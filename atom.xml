@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
-  <updated>2017-07-05T16:45:34.535Z</updated>
+  <updated>2017-07-05T16:58:21.521Z</updated>
   <id>http://tinyland.site/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>VS调用opencv_contrib3.2.0的text模块（简易版）</title>
+    <title>VS调用opencv_contrib3.2.0的text模块（So easy版）</title>
     <link href="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html"/>
     <id>http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html</id>
     <published>2017-07-05T08:47:53.000Z</published>
-    <updated>2017-07-05T16:45:34.535Z</updated>
+    <updated>2017-07-05T16:58:21.521Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文是作为上一篇文章<a href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html">《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》</a>的补充（不需要手动编译，更简洁一些）</p>
