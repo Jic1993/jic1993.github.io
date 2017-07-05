@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tinyland.site/"/>
-  <updated>2017-07-04T09:34:20.071Z</updated>
+  <updated>2017-07-05T04:42:48.628Z</updated>
   <id>http://tinyland.site/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Lissajous曲线动画演示（Maltab实现）</title>
+    <title>Lissajous曲线动画演示（Matlab实现）</title>
     <link href="http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html"/>
     <id>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</id>
     <published>2017-07-02T15:58:54.000Z</published>
-    <updated>2017-07-04T09:34:20.071Z</updated>
+    <updated>2017-07-05T04:42:48.628Z</updated>
     
     <content type="html"><![CDATA[<p>在别人的博文里看到 Lissajous曲线的动态图， 感觉还挺帅，于是自己也想玩一下。</p>
 <!-- ![最终效果](http://upload-images.jianshu.io/upload_images/4066522-3f41aa9bc6d2e54f.gif?imageMogr2/auto-orient/strip) -->
