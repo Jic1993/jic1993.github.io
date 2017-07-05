@@ -4,35 +4,8 @@
 
     
   <url>
-    <loc>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</loc>
-    <lastmod>2017-07-05T04:42:48.628Z</lastmod>
-    <data>
-        <display>
-        <title>Lissajous曲线动画演示（Matlab实现）</title>
-        <pubTime>2017-07-02T15:58:54.000Z</pubTime>
-        
-        <tag>matlab</tag>
-         
-        <tag>lissajous</tag>
-         
-        <tag>animation</tag>
-         
-         
-           
-             
-              <breadCrumb title="Study" url="http://tinyland.site/categories/Study/"/>
-          
-             
-              <breadCrumb title="Math" url="http://tinyland.site/categories/Study/Math/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://tinyland.site/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html</loc>
-    <lastmod>2017-07-04T16:06:30.360Z</lastmod>
+    <lastmod>2017-07-05T08:58:23.741Z</lastmod>
     <data>
         <display>
         <title>Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</title>
@@ -53,6 +26,62 @@
           
              
               <breadCrumb title="Computer Vision" url="http://tinyland.site/categories/Study/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html</loc>
+    <lastmod>2017-07-05T08:54:54.494Z</lastmod>
+    <data>
+        <display>
+        <title>VS调用opencv_contrib3.2.0的text模块（简易版）</title>
+        <pubTime>2017-07-05T08:47:53.000Z</pubTime>
+        
+        <tag>opencv</tag>
+         
+        <tag>ocr</tag>
+         
+        <tag>tesseract</tag>
+         
+        <tag>text</tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="http://tinyland.site/categories/Study/"/>
+          
+             
+              <breadCrumb title="Computer Vision" url="http://tinyland.site/categories/Study/Computer-Vision/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://tinyland.site/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html</loc>
+    <lastmod>2017-07-05T04:42:48.628Z</lastmod>
+    <data>
+        <display>
+        <title>Lissajous曲线动画演示（Matlab实现）</title>
+        <pubTime>2017-07-02T15:58:54.000Z</pubTime>
+        
+        <tag>matlab</tag>
+         
+        <tag>lissajous</tag>
+         
+        <tag>animation</tag>
+         
+         
+           
+             
+              <breadCrumb title="Study" url="http://tinyland.site/categories/Study/"/>
+          
+             
+              <breadCrumb title="Math" url="http://tinyland.site/categories/Study/Math/"/>
           
         </display>
     </data>

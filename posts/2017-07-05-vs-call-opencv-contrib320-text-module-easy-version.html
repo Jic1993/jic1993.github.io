@@ -62,7 +62,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, 小路" />
+  <meta name="keywords" content="opencv,ocr,tesseract,text," />
 
 
 
@@ -78,15 +78,17 @@
 
 
 
-<meta name="description" content="想法满地跑，实现懒得搞">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小路">
-<meta property="og:url" content="http://tinyland.site/archives/index.html">
+<meta name="description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（非编译版本，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件就行了">
+<meta name="keywords" content="opencv,ocr,tesseract,text">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VS调用opencv_contrib3.2.0的text模块（简易版）">
+<meta property="og:url" content="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html">
 <meta property="og:site_name" content="小路">
-<meta property="og:description" content="想法满地跑，实现懒得搞">
+<meta property="og:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（非编译版本，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件就行了">
+<meta property="og:updated_time" content="2017-07-05T08:54:54.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小路">
-<meta name="twitter:description" content="想法满地跑，实现懒得搞">
+<meta name="twitter:title" content="VS调用opencv_contrib3.2.0的text模块（简易版）">
+<meta name="twitter:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（非编译版本，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件就行了">
 
 
 
@@ -114,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://tinyland.site/archives/"/>
+  <link rel="canonical" href="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html"/>
 
 
 
 
 
-  <title>归档 | 小路</title>
+  <title>VS调用opencv_contrib3.2.0的text模块（简易版） | 小路</title>
   
 
 
@@ -155,7 +157,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,177 +295,281 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 4 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html" itemprop="url">
-              
-                <span itemprop="name">VS调用opencv_contrib3.2.0的text模块（简易版）</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-05T16:47:53+08:00"
-              content="2017-07-05" >
-          07-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html" itemprop="url">
-              
-                <span itemprop="name">Lissajous曲线动画演示（Matlab实现）</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-02T23:58:54+08:00"
-              content="2017-07-02" >
-          07-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html" itemprop="url">
-              
-                <span itemprop="name">Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-19T00:23:16+08:00"
-              content="2017-06-19" >
-          06-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/posts/2017-06-15-hello-world.html" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-15T23:46:03+08:00"
-              content="2017-06-15" >
-          06-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小路">
+      <meta itemprop="description" content="想法满地跑，实现懒得搞">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小路">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">VS调用opencv_contrib3.2.0的text模块（简易版）</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-05T16:47:53+08:00">
+                2017-07-05
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-07-05T16:54:54+08:00">
+                2017-07-05
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/" itemprop="url" rel="index">
+                    <span itemprop="name">Study</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Study/Computer-Vision/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Vision</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html" class="leancloud_visitors" data-flag-title="VS调用opencv_contrib3.2.0的text模块（简易版）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文是作为上一篇文章<a href="/posts/2017-06-19-Win10-VS2017-compile-opencv3-2-0-and-opencv-contrib3-2-0-to-call-the-text-module.html">《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》</a>的补充（非编译版本，更简洁一些）</p>
+</blockquote>
+<p>之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是<strong>太繁琐</strong>，这里我找到了一个更简洁的方法<strong><sup><a href="https://github.com/hsed/opencv-ocr" target="_blank" rel="external"> [1] </a></sup></strong>，不需要编译，就可以直接跑起来。(就是<strong>“</strong>盗用<strong>”</strong>别人编译好的二进制文件就行了😁)</p>
+<a id="more"></a>
+<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><ul>
+<li>安装 Tesseract3.05（确保您在安装程序中选择“添加到路径”）</li>
+<li>从 <a href="https://github.com/cesardelgadof/OpenCVBinaries" target="_blank" rel="external">https://github.com/cesardelgadof/OpenCVBinaries</a> 下载 opencv 的二进制文件</li>
+<li>创建新的空 cpp 工程，将源​​文件添加到项目中</li>
+<li>在<strong>项目属性 –&gt; C/C++ –&gt; 附加包含目录</strong> 中添加 opencv include 目录</li>
+<li>在<strong>项目属性 –&gt; 链接器 –&gt; 常规 –&gt; 附加库目录</strong>中添加 opencv lib 目录</li>
+<li>添加 opencv lib 文件：<ul>
+<li>进入 opencv lib 文件夹</li>
+<li>打开 cmd，输入<code>dir / b * d.lib&gt; libs.txt</code>（这是用于调试模式的libs）</li>
+<li>打开 <em>libs.txt</em> 并复制/粘贴到<strong>项目属性 –&gt; 链接器 –&gt; 输入 –&gt; 附加依赖项</strong></li>
+</ul>
+</li>
+<li>在 <strong>Debug</strong> 模式下运行！</li>
+</ul>
+<p>注：如果找不到 Tesseract3.05 的安装文件， 我这里提供了一个百度盘 <a href="http://pan.baidu.com/s/1i59n2Hf" target="_blank" rel="external">http://pan.baidu.com/s/1i59n2Hf</a> ，供下载^^。（记得将<strong>bin</strong>目录加入到<strong>PATH</strong>）</p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://github.com/hsed/opencv-ocr" target="_blank" rel="external">https://github.com/hsed/opencv-ocr</a></li>
+<li><a href="https://github.com/cesardelgadof/OpenCVBinaries" target="_blank" rel="external">https://github.com/cesardelgadof/OpenCVBinaries</a></li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat_pay.png" alt="小路 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      小路
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html" title="VS调用opencv_contrib3.2.0的text模块（简易版）">http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html</a>
+    </li>
+	<!--
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处
+    </li>
+	-->
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/opencv/" rel="tag"># opencv</a>
+          
+            <a href="/tags/ocr/" rel="tag"># ocr</a>
+          
+            <a href="/tags/tesseract/" rel="tag"># tesseract</a>
+          
+            <a href="/tags/text/" rel="tag"># text</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/posts/2017-07-02-matlab-implementation-for-lissajous-curve-animation-demo.html" rel="next" title="Lissajous曲线动画演示（Matlab实现）">
+                <i class="fa fa-chevron-left"></i> Lissajous曲线动画演示（Matlab实现）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -471,6 +577,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTEyMS81Njg5"></div>
+    
+  </div>
+
 
         </div>
         
@@ -490,8 +602,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -573,6 +694,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#具体步骤"><span class="nav-number">1.</span> <span class="nav-text">具体步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">2.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -708,11 +845,23 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+<script>
+$(function() {
+    $("img.lazy").lazyload({
+        event : "sporty"
+    });
+});
+
+$(window).bind("load", function() {
+    var timeout = setTimeout(function() {
+        $("img.lazy").trigger("sporty")
+    }, 5000);
+});
+</script>
 
 
   
@@ -748,6 +897,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
@@ -1207,26 +1367,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
