@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://tinyland.site/posts/2017-07-05-vs-call-opencv-contrib320-text-module-easy-version.html">
 <meta property="og:site_name" content="小路">
 <meta property="og:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（不需要手动编译，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件，">
-<meta property="og:updated_time" content="2017-07-05T16:58:21.521Z">
+<meta property="og:updated_time" content="2017-07-06T03:19:30.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VS调用opencv_contrib3.2.0的text模块（So easy版）">
 <meta name="twitter:description" content="本文是作为上一篇文章《Win10+VS2017编译opencv3.2.0和opencv_contrib3.2.0来调用text模块》的补充（不需要手动编译，更简洁一些）  之前那篇文章讲的是差不多从零开始编译tesseract和opencv+opencv_contrib，步骤确实是太繁琐，这里我找到了一个更简洁的方法 [1] ，不需要编译，就可以直接跑起来。(就是“盗用”别人编译好的二进制文件，">
@@ -420,7 +420,7 @@
 <li>在<strong>项目属性 –&gt; 链接器 –&gt; 常规 –&gt; 附加库目录</strong>中添加 opencv lib 目录</li>
 <li>添加 opencv lib 文件：<ul>
 <li>进入 opencv lib 文件夹</li>
-<li>打开 cmd，输入<code>dir / b * d.lib&gt; libs.txt</code>（这是用于<em>Debug</em>模式的libs）</li>
+<li>打开 cmd，输入<code>dir /b *d.lib &gt; libs.txt</code>（这是用于<em>Debug</em>模式的libs）</li>
 <li>打开 <em>libs.txt</em> 并复制/粘贴到<strong>项目属性 –&gt; 链接器 –&gt; 输入 –&gt; 附加依赖项</strong></li>
 </ul>
 </li>
